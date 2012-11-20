@@ -127,7 +127,7 @@ class AuditReader
         $revisionData = array();
 
         foreach ($columnMap as $fieldName => $resultColumn) {
-            $revisionData[$fieldName] = $row[$resultColumn];
+            $revisionData[$fieldName] = $row[$fieldName];
         }
 
         return $this->createEntity($class->name, $revisionData);
